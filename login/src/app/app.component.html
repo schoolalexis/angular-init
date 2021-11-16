@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [login]="login"></app-header>
 <div *ngIf="getConnect(); then connect else noconnect"></div>
   <ng-template #connect>
     <section class="section">
@@ -11,6 +11,6 @@
     </section>
   </ng-template>
 <ng-template #noconnect>
-  <h1>Identification</h1>
+  <app-ident (leLogin)="onLoginAdded($event)"></app-ident>
 </ng-template>
 <app-footer></app-footer>
