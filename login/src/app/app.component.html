@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div *ngIf="getConnect(); then connect else noconnect"></div>
+  <ng-template #connect>
+    <section class="section">
+      <div class="container">
+        <div class="column">
+          <h1 class="title is-1">Projet Login</h1>
+          <img src="assets/images/fond.png">
+        </div>
+      </div>
+    </section>
+  </ng-template>
+<ng-template #noconnect>
+  <h1>Identification</h1>
+</ng-template>
+<app-footer></app-footer>
